@@ -421,22 +421,20 @@ h3 {
     font-size: 2em;
     width: 80%;
   }
-  .contact {
-    padding: auto;
-    margin: auto;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
   .contactInfo {
+    font-size: 0.75rem;
     width: 100%;
+    margin-bottom: 0.5rem;
   }
   .contactForm {
     padding: 0.25rem;
-    margin: auto;
+    margin: 2rem auto;
     width: 100%;
   }
   .inputBox span {
     font-size: 0.75rem;
+  }
+  .contactInfo {
+    position: relative;
   }
 }
