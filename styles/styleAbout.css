@@ -1,9 +1,17 @@
+root {
+  font-size: 16px;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 .container-fluid {
   height: 100%;
@@ -127,7 +135,25 @@ nav img {
 nav .fas {
   display: none;
 }
-
+/*myblog*/
+.myBlog {
+  width: 80%;
+  margin: auto;
+}
+.myBlog-row {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.myBlog-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.25em 1.15em;
+  box-sizing: border-box;
+  margin-right: 0.625rem;
+  margin-top: 0.845rem;
+}
 /*about*/
 .about {
   width: 80%;
@@ -144,7 +170,7 @@ h1 {
 p {
   color: rgb(99, 96, 96);
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5rem;
   padding: 0.675em;
 }
@@ -166,9 +192,161 @@ p {
   height: 100%;
   object-fit: cover;
 }
+/*contact*/
+#contact {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 5rem);
+  margin: 0 auto 5rem auto;
+}
+.contact_container {
+  position: relative;
+  min-width: 6.875rem;
+  min-height: 34.375rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  margin-top: 2rem;
+}
+.contactInfo {
+  position: absolute;
+  top: 2.5rem;
+  width: 350px;
+  height: calc(100% - 5rem);
+  background-color: #095a55;
+  z-index: 1;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+.contactInfo h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.contactInfo .info {
+  position: relative;
+  margin: 1.25rem 0;
+}
+.contactInfo .info li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 1.25rem 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+.contactInfo .info li span:nth-child(1) {
+  width: 1.875rem;
+  min-width: 1.875rem;
+}
+.contactInfo .info li span:nth-child(2) {
+  color: #fff;
+  margin-left: 0.625rem;
+  font-weight: 300;
+}
+.contactInfo .info li span:nth-child(1) img {
+  max-width: 100%;
+  filter: invert(1);
+}
+.contactInfo .social {
+  position: relative;
+  display: flex;
+}
+.contactInfo .social li {
+  list-style: none;
+  margin-right: 0.9375rem;
+}
+.contactInfo .social li a {
+  text-decoration: none;
+}
+.contactInfo .social li a img {
+  filter: invert(1);
+}
+.contactForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 4.375rem 3.125rem;
+  padding-left: 15.625rem;
+  margin-left: 9.375rem;
+  /*width: calc(100% - 9.375rem);*/
+  /*height: 100%;*/
+  background: #fff;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.contactForm h2 {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.contactForm .formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 1.875rem;
+}
+.contactForm .formBox .inputBox {
+  position: relative;
+  margin-bottom: 2.1875rem;
+}
+.w50 {
+  width: 47%;
+}
+.w100 {
+  width: 100%;
+}
+.inputBox input,
+.inputBox textarea {
+  width: 100%;
+  resize: none;
+  padding: 0.3125rem 0;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+}
+.inputBox textarea {
+  height: 7.5rem;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 1.125rem;
+  font-weight: 300;
+  transition: 0.3s;
+}
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span {
+  transform: translateY(-1.25rem);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #333;
+}
+.inputBox input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background: #095a55;
+  color: #fff;
+  border: none;
+  max-width: 9.375rem;
+  padding: 0.75rem;
+}
+.inputBox input[type="submit"]:hover {
+  background: #0d948b;
+}
 /*footer*/
 #footers {
-  padding: 7% 15%;
   text-align: center;
   color: #fff;
 }
@@ -188,8 +366,8 @@ p {
   }
   .navlinks {
     position: absolute;
-    background: #ff4436;
-    height: 100vh;
+    background: rgba(0, 110, 213, 0.87);
+    height: auto;
     width: 65%;
     top: 0;
     right: -200%;
@@ -213,5 +391,21 @@ p {
   .about {
     display: flex;
     flex-direction: column;
+  }
+  .contactInfo {
+    font-size: 0.75rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .contactForm {
+    padding: 0.25rem;
+    margin: 2rem auto;
+    width: 100%;
+  }
+  .inputBox span {
+    font-size: 0.75rem;
+  }
+  .contactInfo {
+    position: relative;
   }
 }

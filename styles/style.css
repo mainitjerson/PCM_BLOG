@@ -7,6 +7,7 @@ root {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 .container-fluid {
   height: 100%;
   margin: 0;
@@ -368,7 +369,6 @@ h3 {
   background: #0d948b;
 }
 #footers {
-  padding: 7% 15%;
   text-align: center;
   color: #fff;
 }
@@ -388,8 +388,8 @@ h3 {
   }
   .navlinks {
     position: absolute;
-    background: #ff4436;
-    height: 100vh;
+    background: rgba(0, 110, 213, 0.87);
+    height: auto;
     width: 65%;
     top: 0;
     right: -200%;
