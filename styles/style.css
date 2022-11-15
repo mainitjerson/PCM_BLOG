@@ -216,7 +216,7 @@ h3 {
   margin: 0.625em 0;
 }
 /*contact*/
-.contact {
+#contact {
   display: flex;
   flex-direction: row;
   width: calc(100% - 5rem);
